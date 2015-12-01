@@ -18,6 +18,7 @@
 		AADEB93E1C09C2FE0068342F /* PLCLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AADEB93D1C09C2FE0068342F /* PLCLocationHelper.m */; };
 		AADEB9431C09C5A20068342F /* PLCPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = AADEB9421C09C5A20068342F /* PLCPlace.m */; };
 		AADEB9461C09C5E80068342F /* PLCPlaceMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = AADEB9451C09C5E80068342F /* PLCPlaceMapper.m */; };
+		B26DD7C91C0E27BB0024478E /* PLCPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B26DD7C81C0E27BB0024478E /* PLCPlaceCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		AADEB9421C09C5A20068342F /* PLCPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCPlace.m; sourceTree = "<group>"; };
 		AADEB9441C09C5E80068342F /* PLCPlaceMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCPlaceMapper.h; sourceTree = "<group>"; };
 		AADEB9451C09C5E80068342F /* PLCPlaceMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCPlaceMapper.m; sourceTree = "<group>"; };
+		B26DD7C71C0E27BB0024478E /* PLCPlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLCPlaceCell.h; sourceTree = "<group>"; };
+		B26DD7C81C0E27BB0024478E /* PLCPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLCPlaceCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 		AADEB9211C09BE3A0068342F /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				B26DD7C61C0E279E0024478E /* Cells */,
 				AADEB9401C09C5970068342F /* Models */,
 				AADEB93F1C09C5850068342F /* Network */,
 				AADEB9251C09BE3A0068342F /* AppDelegate.h */,
@@ -122,6 +126,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B26DD7C61C0E279E0024478E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B26DD7C71C0E27BB0024478E /* PLCPlaceCell.h */,
+				B26DD7C81C0E27BB0024478E /* PLCPlaceCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		B423216BFF9A6EC60CB40632 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 				AADEB91C1C09BE3A0068342F /* Frameworks */,
 				AADEB91D1C09BE3A0068342F /* Resources */,
 				4B46A41BC008A645B738DB04 /* Copy Pods Resources */,
+				E74EBE47C818353318517C3E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +251,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E74EBE47C818353318517C3E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -249,6 +278,7 @@
 				AADEB9271C09BE3A0068342F /* AppDelegate.m in Sources */,
 				AADEB9431C09C5A20068342F /* PLCPlace.m in Sources */,
 				AADEB9241C09BE3A0068342F /* main.m in Sources */,
+				B26DD7C91C0E27BB0024478E /* PLCPlaceCell.m in Sources */,
 				AADEB9461C09C5E80068342F /* PLCPlaceMapper.m in Sources */,
 				AADEB93B1C09BF380068342F /* PLCGoogleMapService.m in Sources */,
 			);

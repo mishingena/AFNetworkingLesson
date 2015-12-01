@@ -1,25 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OBC-o8-YuZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Google places-->
+        <scene sceneID="xbq-CJ-ioF">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="Ode-XR-CY0" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="EML-nz-X3v">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Введите место для поиска" id="yau-09-wcv">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="100" id="Y0l-sH-dGG" customClass="PLCPlaceCell">
+                                <rect key="frame" x="0.0" y="136" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y0l-sH-dGG" id="8c1-k0-H6u">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hHv-Oi-wkl">
+                                            <rect key="frame" x="15" y="10" width="80" height="80"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="XSJ-3R-Pa6"/>
+                                                <constraint firstAttribute="width" secondItem="hHv-Oi-wkl" secondAttribute="height" multiplier="1:1" id="bbV-g7-Ucf"/>
+                                                <constraint firstAttribute="height" constant="80" id="hT4-cf-cgq"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="bbV-g7-Ucf"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXx-AW-og9">
+                                            <rect key="frame" x="105" y="39.5" width="485" height="20.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="hHv-Oi-wkl" firstAttribute="leading" secondItem="8c1-k0-H6u" secondAttribute="leading" constant="15" id="CAv-Bk-8He"/>
+                                        <constraint firstAttribute="bottom" secondItem="hHv-Oi-wkl" secondAttribute="bottom" constant="10" id="Fzc-ZL-aFr"/>
+                                        <constraint firstAttribute="trailing" secondItem="PXx-AW-og9" secondAttribute="trailing" constant="10" id="PiA-fi-Kxo"/>
+                                        <constraint firstItem="hHv-Oi-wkl" firstAttribute="centerY" secondItem="8c1-k0-H6u" secondAttribute="centerY" id="Su6-XW-USh"/>
+                                        <constraint firstItem="hHv-Oi-wkl" firstAttribute="top" secondItem="8c1-k0-H6u" secondAttribute="top" constant="10" id="e8f-CX-hYL"/>
+                                        <constraint firstItem="PXx-AW-og9" firstAttribute="leading" secondItem="hHv-Oi-wkl" secondAttribute="trailing" constant="10" id="p6u-cB-Duw"/>
+                                        <constraint firstItem="PXx-AW-og9" firstAttribute="centerY" secondItem="8c1-k0-H6u" secondAttribute="centerY" id="vLr-Ix-OWG"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Fzc-ZL-aFr"/>
+                                            <exclude reference="e8f-CX-hYL"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="placeImageView" destination="hHv-Oi-wkl" id="Q3r-Ew-Hgc"/>
+                                    <outlet property="placeTextLabel" destination="PXx-AW-og9" id="4U8-Bs-lGU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ode-XR-CY0" id="cjX-Nw-mNx"/>
+                            <outlet property="delegate" destination="Ode-XR-CY0" id="Doz-Um-O9d"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Google places" id="p0k-XY-2HH"/>
+                    <connections>
+                        <outlet property="searchBar" destination="yau-09-wcv" id="eW9-zY-LRm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zx5-2P-0Dz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1519" y="322"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5o6-pV-VuG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OBC-o8-YuZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="upm-Uv-i0A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ode-XR-CY0" kind="relationship" relationship="rootViewController" id="Mfh-uh-tWE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hty-oM-uvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="322"/>
         </scene>
     </scenes>
 </document>
